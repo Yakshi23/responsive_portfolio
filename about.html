@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: rgb(5, 5, 49);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(29, 29, 109);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0px 23px;
+    }
+
+    nav ul a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul a:hover {
+        color: rgb(175, 175, 236);
+        font-size: 1.04rem;
+    }
+
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .firstsection {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .leftsection {
+        width: 30%;
+        height: 25%;
+        margin-top: 100px;
+        font-size: 1.3rem;
+    }
+
+    .rightsection img {
+        width: 80%;
+        margin-top: 100px;
+        border-radius: 35px;
+    }
+
+    .firstspan {
+        color: rgb(206, 154, 226);
+        font-size: 2rem;
+    }
+
+    .firstspan:hover {
+        font-size: 2.3rem;
+    }
+
+    .secondspan {
+        margin-top: 100px;
+        color: rgb(206, 154, 226);
+        font-size: 2rem;
+    }
+
+    .second {
+        margin-top: 100px;
+    }
+
+    .secondspan:hover {
+        font-size: 2.3rem;
+    }
+    .third{
+        margin-top: 100px;
+    }
+    .thirdspan{
+        margin-top: 100px;
+        color: rgb(206, 154, 226);
+        font-size: 2rem;
+    }
+    .thirdspan:hover {
+        font-size: 2.3rem;
+    }
+    .button a{
+        display: inline-block;
+        justify-content: center;
+        margin-top: 50px;
+        text-decoration: none;
+        color:rgb(208, 147, 233);
+        font-size: 2rem;
+        border: 2px solid rgb(208, 147, 233);
+        width: 150px;
+        padding: 10px;
+        margin-left: 650px;
+    }
+    .button a:hover{
+        background-color: rgb(45, 14, 83);
+        color: rgb(187, 146, 226);
+    }
+    hr{
+        border: 0;
+        background:  rgb(124, 49, 194);
+        height: 2px;
+        margin: 2px 84px;
+    }
+    .mobile-icon{
+        width: 3rem;
+        height: 3rem;
+    }
+    .mobile{
+        display: none;
+    }
+    .mobile-icon[name="close-outline"]{
+        display: none;
+    }
+    .html{
+        overflow-x: hidden;
+    }
+    @media(max-width:980px){
+        .mobile{
+            display: block;
+            z-index: 999;
+            border: 2px solid white;
+        }
+        .right{
+            width: 100%;
+            height: 100vh;
+            background-color:  rgb(29, 29, 109);
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: translateX(100%);
+            transition: all 0.5s linear;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .list{
+           flex-direction: column;
+           gap: 20px;
+           align-items: center;
+            
+        }
+        header{
+            position: relative;
+        }
+         .active .right{
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .active .mobile .mobile-icon[name="close-outline"]{
+            display: block;
+        }
+        .active .mobile .mobile-icon[name="menu-outline"]{
+            display: none;
+        }
+        .leftsection{
+            width: 50%;
+        }
+        .rightsection img{
+            width: 60%;
+            margin-left: 25px;
+        }
+        .first{
+            font-size: 1rem;
+        }
+        .button a{
+            margin-left: 15px;
+        }
+        .second{
+            margin-top: 50px;
+        }
+        .third{
+            margin-top: 50px;
+        }
+        .firstspan{
+            width: 50%;
+        }
+    }
+
+    
+</style>
+
+<body>
+    <header class="header active">
+        <nav>
+            <div class="left">Yakshi's Portfolio</div>
+            <div class="right">
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile">
+                <ion-icon name="menu-outline" class="mobile-icon"></ion-icon>
+                <ion-icon name="close-outline"class="mobile-icon"></ion-icon>
+            </div>
+        </nav>
+       
+
+    </header>
+    <section class="firstsection">
+        <div class="leftsection">
+            <div class="first">
+                <span class="firstspan">About Me</span>
+                <p>
+                    Hardworking and driven student of
+                    Computer Engineering seeking an
+                    internship to apply my knowledge
+                    with computer system and grow my
+                    skills.
+                </p>
+            </div>
+            <div class="second">
+                <span class="secondspan">Skills</span>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+            <div class="third">
+                <span class="thirdspan">Grades/Achievements</span>
+                <p>
+                    10th: 85.85%age<br>
+                    12th: 91.67%age<br>
+                    CET: 82.525%tile<br>
+                    Sem1: 9.86 CGPI<br>
+                    Sem2: 9.80 CGPI<br>
+                    Sem3: 10.00 CGP<br>
+                </p>
+            </div>
+        </div>
+        <div class="rightsection">
+            <img src="WhatsApp Image 2023-08-07 at 6.10.42 PM (2).jpeg" alt="">
+        </div>
+    </section>
+    <hr>
+    <div class="button">
+        <a href="Yakshi Sharma (1).pdf" target="_blank">Resume</a>
+    </div>
+    <script>
+        const  mobile_nav=document.querySelector(".mobile");
+        const nav_header=document.querySelector('.header');
+
+        const toggleNavbar=()=>{
+            nav_header.classList.toggle("active");
+        };
+
+        mobile_nav.addEventListener("click",()=>toggleNavbar())
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

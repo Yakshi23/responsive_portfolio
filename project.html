@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(5, 5, 49);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(29, 29, 109);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0px 23px;
+    }
+
+    nav ul a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul a:hover {
+        color: rgb(175, 175, 236);
+        font-size: 1.04rem;
+    }
+
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .firstsection {
+       display: flex;
+       justify-content: center;
+       width: 100%;
+        margin-top: 100px;
+    }
+
+    .leftdiv {
+        width: 40%;
+
+    }
+
+    .rightdiv {
+        width: 40%;
+    }
+
+    .leftdiv span {
+        color: rgb(174, 121, 223);
+        font-size: 2rem;
+    }
+
+    .leftdiv ul {
+        margin: 15px;
+    }
+
+    .leftdiv a {
+        color: white;
+    }
+
+    .container {
+
+        width: 90%;
+        height: 300px;
+        display: grid;
+        /* padding: 25px;*/
+        grid-template-columns: repeat(4, minmax(250px, 1fr));
+        column-gap: 12px;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .item {
+        width: 222px;
+        height: 222px;
+    }
+
+    img {
+        height: 222px;
+        width: 222px;
+        border-radius: 22px;
+        box-shadow: 4px 5px 22px purple;
+    }
+
+    img:hover {
+        width: 225px;
+        height: 225px;
+    }
+    .mobile-icon{
+        width: 3rem;
+        height: 3rem;
+    }
+    .mobile{
+        display: none;
+    }
+    .mobile-icon[name="close-outline"]{
+        display: none;
+    }
+    .html{
+        overflow-x: hidden;
+    }
+
+    @media(max-width:998px) {
+        html {
+            font-size: 75%;
+        }
+    }
+
+    @media(max-width:760px) {
+        .container {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            column-gap: 5px;
+            row-gap: 50px;
+            margin: 15px;
+        }
+    }
+    @media(max-width:980px){
+        .mobile{
+            display: block;
+            z-index: 999;
+            border: 2px solid white;
+        }
+        .right{
+            width: 100%;
+            height: 100vh;
+            background-color:  rgb(29, 29, 109);
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: translateX(100%);
+            transition: all 0.5s linear;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .list{
+           flex-direction: column;
+           gap: 20px;
+           align-items: center;
+            
+        }
+        header{
+            position: relative;
+        }
+         .active .right{
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .active .mobile .mobile-icon[name="close-outline"]{
+            display: block;
+        }
+        .active .mobile .mobile-icon[name="menu-outline"]{
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <header class="header active">
+        <nav>
+            <div class="left">Yakshi's Portfolio</div>
+            <div class="right">
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile">
+                <ion-icon name="menu-outline" class="mobile-icon"></ion-icon>
+                <ion-icon name="close-outline"class="mobile-icon"></ion-icon>
+            </div>
+        </nav>
+       
+
+    </header>
+    <section class="firstsection">
+        <div class="container">
+            <div class="item">
+                <a href="https://github.com/Yakshi23/Attendence-Management-System" target="_blank"><img
+                        src="https://www.zimyo.com/wp-content/uploads/2020/08/Technologies-used-in-the-Attendance-management.jpg"
+                        alt=""></a>
+                Attendence Management System
+            </div>
+            <div class="item"><a href="https://github.com/Yakshi23/Temperature-Converter" target="_blank"><img
+                        src="https://play-lh.googleusercontent.com/Myal1Y9fJ-HIEIidw0SLXs56vOcYgRcDeQFKtKsEvp8fm-l87oWyAIrSoodHw3LU1zw=w240-h480-rw"
+                        alt="">
+                </a>Temperature Converter</div>
+            <div class="item">
+                    <img
+                        src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/10/Best_education_website_design_jpg_fr5CCeYR.jpg?auto=format&q=60&fit=max&w=930">
+                </a>
+                Educational website
+            </div>
+            <div class="item"><a href="https://github.com/Yakshi23/Portfolio" target="_blank"><img
+                        src="https://cache.careers360.mobi/media/article_images/2022/4/20/How-to-make-portfolio-for-design-admission.webp">
+                </a>
+                Portfolio</div>
+        </div>
+    </section>
+    <script>
+        const  mobile_nav=document.querySelector(".mobile");
+        const nav_header=document.querySelector('.header');
+
+        const toggleNavbar=()=>{
+            nav_header.classList.toggle("active");
+        };
+
+        mobile_nav.addEventListener("click",()=>toggleNavbar())
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
